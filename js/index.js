@@ -19,9 +19,12 @@ if(tablaUsuario.length > 0) {
         dataFila += "<td>"+letUsuario.Identificacion+"</td>";
         dataFila += "<td>"+letUsuario.Telefono+"</td>";
         dataFila += "<td>"+letUsuario.Direccion+"</td>";
+        dataFila += "<td>"+letUsuario.Estado+"</td>";
+        dataFila += "<td>"+
+"<button type='button' class='btn btn-warning' oneclick='abrirFrom("+letUsuario.idUsuario+")'>EDITAR</button>"+
+"</td>";
+dataFila +="<tr>";
 
-
-        dataFila += "</tr>";
 
     }
     document.getElementById("dataUsuarios").innerHTML = dataFila;
