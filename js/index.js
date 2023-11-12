@@ -37,3 +37,13 @@ function abrirForm(idForm){
     localStorage.setItem("idForm", JSON.stringify(idForm));
     window.location.replace("index-Form.html");
 }
+
+function eliminarItem(idItem){
+    for(const i in tablaUsuario){
+        let letUsuario = JSON.parse(tablaUsuario[i]);
+        if(letUsuario.idUsuario == idItem){
+            tablaUsuario.splice(i,1);
+            localStorage.setItem("tablaUsuario",JSON.stringify(tablaUsuario));
+        }
+    }
+}
