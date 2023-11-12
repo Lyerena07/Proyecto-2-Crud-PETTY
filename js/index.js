@@ -21,8 +21,9 @@ if(tablaUsuario.length > 0) {
         dataFila += "<td>"+letUsuario.Direccion+"</td>";
         dataFila += "<td>"+letUsuario.Estado+"</td>";
         dataFila += "<td>"+
-"<button type='button' class='btn btn-warning' onclick='abrirForm("+letUsuario.idUsuario+")'>EDITAR</button>"+
-"</td>";
+                    "<button type='button' class='btn btn-warning' onclick='abrirForm("+letUsuario.idUsuario+")'>EDITAR</button>"+
+                    "<button type='button' class='btn btn-info' onclick='eliminarItem("+letUsuario.idUsuario+")'>ELIMINAR</button>"+
+                    "</td>";
 dataFila +="<tr>";
 
 
