@@ -24,11 +24,14 @@ if(tablaUsuario.length > 0) {
                     "<button type='button' class='btn btn-warning' onclick='abrirForm("+letUsuario.idUsuario+")'>EDITAR</button>"+
                     "<button type='button' class='btn btn-info' onclick='eliminarItem("+letUsuario.idUsuario+")'>ELIMINAR</button>"+
                     "</td>";
-dataFila +="<tr>";
+          dataFila +="<tr>";
 
 
     }
     document.getElementById("dataUsuarios").innerHTML = dataFila;
+  }
+  else{
+    document.getElementById("dataUsuarios").innerHTML = "<tr><td colspan='7'>No hay datos</td></tr>";
   }
 }
 
@@ -43,7 +46,7 @@ function eliminarItem(idItem){
         let letUsuario = JSON.parse(tablaUsuario[i]);
         if(letUsuario.idUsuario == idItem){
             tablaUsuario.splice(i,1);
-            localStorage.setItem("tablaUsuario",JSON.stringify(tablaUsuario));
+            localStorage.setItem("tablaUsuarioStorage",JSON.stringify(tablaUsuario));
         }
     }
 }
