@@ -25,14 +25,23 @@ function guardar() {
   console.log(objUsuario);
   //EDITAR
   if (idForm > 0) {
-  }
+    for (const i in tablaUsuario){
+    let letUsuario = JSON.parse(tablaUsuario[i]);
+    if (letUsuario.idUsuario == idForm){
+        tablaUsuario[i] = objUsuario;
+        break;
+     }
+    }
+  } else {
   //NUEVOS PACIENTES
   tablaUsuario.push(objUsuario);
 
+  }
+  
   localStorage.setItem("tablaUsuarioStorage", JSON.stringify(tablaUsuario));
   window.location.replace("index.html");
 
-  //sacar datos de la fila de la tabla y ponerlo en el formulario
+ 
 }
 
 function cargarPagina() {
@@ -48,7 +57,6 @@ function cargarPagina() {
         document.getElementById("txtDireccion").value = letUsuario.Direccion;
         break;
         
-
       }
     }
   }
