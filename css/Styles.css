@@ -1,0 +1,38 @@
+.encabezado{
+    background:linear-gradient(#f7f8f9,#f5d2ea);
+    color: white;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+ padding: 30px;
+}   
+
+.Logo{
+    width: 200px;
+    margin: 20px 0;
+}
+
+.container{
+font-size: 100px;
+text-align: center;
+color: lightslategray;
+padding: 1rem;
+background: linear-gradient(#f7f8f9,#f5d2ea);
+width: 200%;
+margin: 80px;
+}
+
+
+.site-footer{
+    background-color: var(--primario);
+    padding: 5rem;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: lightslategray;
+}
