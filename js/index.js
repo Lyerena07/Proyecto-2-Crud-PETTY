@@ -38,7 +38,7 @@ if(tablaUsuario.length > 0) {
 
 function abrirForm(idForm){
     localStorage.setItem("idForm", JSON.stringify(idForm));
-    window.location.replace("index-Form.html");
+    window.location.replace("form.html");
 }
 
 function eliminarItem(idItem){
